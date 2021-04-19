@@ -22,10 +22,13 @@ It seems that management renewal has been to focus of the company to the detrime
 
 ### Employees eligible for the mentorship program
 Using the ERD created previously, the following Mentorship Eligibility table was created and it holds all the current employees who were born between January 1st, 1965 and December 31st, 1965.
+
 ![2](https://user-images.githubusercontent.com/64053195/115276690-57885300-a111-11eb-9e70-b315d5184b61.png)
+
 Extract of the mentorship eligibility table
  
 ![3](https://user-images.githubusercontent.com/64053195/115276731-6969f600-a111-11eb-8339-175cd936b5a7.png)
+
 Eligible mentors per job title
 
 - There are 1,549 employees eligible to participate in the mentorship program.
@@ -38,9 +41,11 @@ Eligible mentors per job title
 - The following tables give us the number of retirement-ready employees and the number of eligible mentors per department. It shows that all departments are lacking mentors.
 
 ![4](https://user-images.githubusercontent.com/64053195/115276875-9918fe00-a111-11eb-914f-ff5c1e2d585b.png)
+
 Retiring employees per department
 
 ![5](https://user-images.githubusercontent.com/64053195/115276922-a504c000-a111-11eb-89ca-5d14d86de134.png)
+
 Eligible mentors per department
 
 - Reviewing the criteria to qualify for the mentorship program would be needed by the company to prepare for the coming "silver tsunami".
