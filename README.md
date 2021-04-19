@@ -1,28 +1,46 @@
-# Pewlett Hackard Employees Database Management and Analysis
+# Pewlett-Hackard-Analysis
 ## Project Overview
-In this project, Database analysis for the employees eligible for the retirement has been carried out. The retirement criterion was that the birth date of the employee should be between 1952 and 1955. And also the employee should be hired between 1985 and 1988.
-
-The purpose of our project is to determine the number of retiring employees by title and identify which employees are eligible to to participate in the mentorship program. Our retiring employees by title information will show the titles of all employees born between January, 1 1952 and December, 31 1955. First we created a query that retrieved the emp_no, first_name and last_name columns from the employees table and retrieved the title,from_date and to_date columns of the titles table in our pewlett-hackard query. We joined both of these table on the primary key,filtered the data by birth_date and put the information into a new table. For the next two parts of deliverable 1 we created a unique_titles table to find the first occurance of the emp_no in our new table by using the DISTINCT ON function and for the last part of the deliverable we did ORDER BY COUNT to show us the total number of each title from our unique_titles table that we created. The second deliverable we wrote a query that retrieved columns from our employees and dept_emp table, filtered data on current employees born in 1965 then ordered the table by emp_no.
-
-Tools
-SQL, PostgreSQL, pgAdmin
+Analyze Pewlett Hackard employee database using PostgreSQL to help the company anticipate the "silver tsunami" as many current employees will leave to retirement.
+For this analysis we will:
+- determine the number of retiring employees per title,
+- identify employees who are eligible to participate in a mentorship program.
+## Resources
+Data Source: departments.csv, dept_manager.csv, dept_emp.csv, employees.csv, salaries.csv, titles.csv
+Software: PostgreSQL 11.9, pgAdmin 4
+Documentation: PostgreSQL documentation, PostgreSQL tutorial, pgAdmin documentation
 
 ## Results
+### Number of retiring employees per title
+Using the ERD created previously, the following Retirement Titles table was created and it holds all the titles of employees who were born between January 1st, 1952 and December 31st, 1955.
 
-With the retirment_titles table we are able to see every eligible for retirement employee and how long they have worked at each position over the course of their career.
+![1](https://user-images.githubusercontent.com/64053195/115276606-39baee00-a111-11eb-8bfe-6129ae9c918e.png)
 
-The unique titles table that we created is showing the most recent title for employees of retirment age.
+90,398 employees or 37.7% of the company's total current employees will be retiring soon.
+Senior Engineer, Senior Staff and Engineer will be the most impacted positions with respectively 29,414, 28,254 and 14,222 futures retirees, which correspond to 12.3%, 11.8% and 5.92% of the company's workforce.
+Only 2 Managers will be retiring soon.
+It seems that management renewal has been to focus of the company to the detriment of technical positions renewal.
 
-Our retiring_titles shows us the a majority of the employees of retirment age (57,668/90,398 = 64%) have senior titles.
-Number of individuals retiring: There are 33118 current employees which are retiring as per the above criterion.
+### Employees eligible for the mentorship program
+Using the ERD created previously, the following Mentorship Eligibility table was created and it holds all the current employees who were born between January 1st, 1965 and December 31st, 1965.
+![2](https://user-images.githubusercontent.com/64053195/115276690-57885300-a111-11eb-9e70-b315d5184b61.png)
+Extract of the mentorship eligibility table
+ 
+![3](https://user-images.githubusercontent.com/64053195/115276731-6969f600-a111-11eb-8339-175cd936b5a7.png)
+Eligible mentors per job title
 
-Number of individuals being hired: The number of individuals being hired should be ideally equal to the number of retirees (i.e.33118). But there should also be some criterion for hiring as well.
-
-Number of individuals available for mentorship role: There are 1549 employees who are eligible for mentorship role.The mentorship criterion was that the employee should be born in year 1965.
+- There are 1,549 employees eligible to participate in the mentorship program.
+- 294 Senior Engineers, 422 Senior Staffs and 395 Engineers are eligbible mentors.
 
 ## Summary
-Recommendation for further analysis on this data set: There should be some criterion for hiring individuals as well. Because with the change of time and the technology enhancement or automation the company requirement changes. Also the current salary should be updated in the database after the employees's promotion.
+- 90,398 roles will need to be filled as the "silver tsunami" begins to make an impact.
+- There are 1,549 eligible mentors in the company.
+- If we assume that they will all be willing to participate in the mentorship program, it will imply that each mentor would have an average of 58 mentees, so we can conclude that there is not enough mentors to prepare the next generation of Pewlett Hackard employees.
+- The following tables give us the number of retirement-ready employees and the number of eligible mentors per department. It shows that all departments are lacking mentors.
 
-## Conclusion
+![4](https://user-images.githubusercontent.com/64053195/115276875-9918fe00-a111-11eb-914f-ff5c1e2d585b.png)
+Retiring employees per department
 
-Seeing the 63 % of the workforce is either retirment or mentorship eligible there will most likely be many positions to fill over the next 5-10 years. There may not exactly be enough people in the workforce to take care of the tasks or even come close to the amount of experience to fill these roles so quickly but what companies can do is try to best learn about what these employees did to be so successful/ having such long lasting careers to continue the tradition for future employees. Most likely the future generation is more computer savy/ efficent due to technologies and can catch on quickly helping companies continue to trend in the right direction by keeping revenues up.
+![5](https://user-images.githubusercontent.com/64053195/115276922-a504c000-a111-11eb-89ca-5d14d86de134.png)
+Eligible mentors per department
+
+- Reviewing the criteria to qualify for the mentorship program would be needed by the company to prepare for the coming "silver tsunami".
